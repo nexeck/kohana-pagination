@@ -3,7 +3,9 @@
 /**
  * Pagination helper.
  *
- * @author Marcel Beck <marcel.beck@mbeck.org>
+ * @package Kohana/Pagination
+ * @author    Marcel Beck <marcel.beck@mbeck.org>
+ * @copyright (c) 2012 Marcel Beck
  */
 abstract class Kohana_Pagination {
 
@@ -47,6 +49,9 @@ abstract class Kohana_Pagination {
 	 * @param int $total
 	 * @param int $limit
 	 * @param int $current
+	 *
+	 * @uses Request::current
+	 * @uses Kohana::$config
 	 */
 	public function __construct($total, $limit = null, $current = null)
 	{
@@ -208,6 +213,8 @@ abstract class Kohana_Pagination {
 	 * Generates the full URL for a certain page.
 	 *
 	 * @param   integer int page number
+	 *
+	 * @uses Url::site
 	 *
 	 * @return  string   page URL
 	 */
