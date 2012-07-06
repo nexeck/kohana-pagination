@@ -1,0 +1,11 @@
+{
+	"project_id": "kohana-pagination",
+	"conduit_uri": "https://phabricator.machate.org/api/",
+	"immutable_history": false,
+	"lint.engine" : "PKITOFLintEngine",
+	"lint.phpcs.standard" : "Kohana",
+	"unit.engine" : "PhpunitTestEngine",
+	"phutil_libraries" : [
+		"../../../libcustom/src"
+	]
+}
