@@ -3,7 +3,7 @@
 /**
  * Pagination helper.
  *
- * @package Kohana/Pagination
+ * @package   Kohana/Pagination
  * @author    Marcel Beck <marcel.beck@mbeck.org>
  * @copyright (c) 2012 Marcel Beck
  */
@@ -59,10 +59,10 @@ abstract class Kohana_Pagination {
 		$this->route($this->_request->route());
 
 		$this->_route_params = array(
-														'directory'		=> $this->_request->directory(),
-														'controller' 	=> $this->_request->controller(),
-														'action'		=> $this->_request->action(),
-													) + $this->_request->param();
+														 'directory'    => $this->_request->directory(),
+														 'controller'   => $this->_request->controller(),
+														 'action'       => $this->_request->action(),
+													 ) + $this->_request->param();
 
 		$this->_config = Kohana::$config->load('pagination');
 
@@ -215,7 +215,6 @@ abstract class Kohana_Pagination {
 	 * @param   integer int page number
 	 *
 	 * @uses Url::site
-	 *
 	 * @return  string   page URL
 	 */
 	public function url($page = 1)
@@ -272,5 +271,4 @@ abstract class Kohana_Pagination {
 		// Don't prepend '?' to an empty string
 		return ($query === '') ? '' : ('?' . $query);
 	}
-
 } // End Pagination

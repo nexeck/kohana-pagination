@@ -3,7 +3,7 @@
 /**
  * Pagination helper.
  *
- * @package Kohana/Pagination
+ * @package   Kohana/Pagination
  * @author    Marcel Beck <marcel.beck@mbeck.org>
  * @copyright (c) 2012 Marcel Beck
  */
