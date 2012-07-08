@@ -3,7 +3,7 @@
 	"conduit_uri": "https://phabricator.machate.org/api/",
 	"immutable_history": false,
 	"lint.engine" : "PKITOFLintEngine",
-	"lint.phpcs.standard" : "Kohana",
+	"lint.phpcs.standard" : "Nexeck",
 	"unit.engine" : "PhpunitTestEngine",
 	"phutil_libraries" : [
 		"../../../libcustom/src"

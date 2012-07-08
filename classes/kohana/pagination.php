@@ -1,7 +1,11 @@
 <?php defined('SYSPATH') or die('No direct script access.');
-
 /**
  * Pagination helper.
+ *
+ * <code>
+ * $pagination = Pagination::factory(100, 20);
+ * $this->template->set('pagination', $pagination);
+ * </code>
  *
  * @package   Kohana/Pagination
  * @author    Marcel Beck <marcel.beck@mbeck.org>
