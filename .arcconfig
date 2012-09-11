@@ -6,6 +6,6 @@
 	"lint.phpcs.standard" : "Nexeck",
 	"unit.engine" : "PhpunitTestEngine",
 	"phutil_libraries" : [
-		"../../../libcustom/src"
+		"libcustom/src"
 	]
 }
