@@ -1,23 +1,25 @@
-<div class="pagination">
-	<ul>
-		{% if pagination.get_current_page == 1 %}
-			<li class="disabled"><a href="#">«</a></li>
-		{% else %}
-			<li><a href="{{ pagination.url(1) }}">«</a></li>
-		{% endif %}
+{% if pagination is defined %}
+    <div class="pagination">
+        <ul>
+            {% if pagination.get_current_page == 1 %}
+                <li class="disabled"><a href="#">«</a></li>
+            {% else %}
+                <li><a href="{{ pagination.url(1) }}">«</a></li>
+            {% endif %}
 
-		{% for i in 1..pagination.get_total_pages%}
-			{% if i == pagination.get_current_page %}
-				<li class="active"><a href="#">{{ i }}</a></li>
-			{% else %}
-				<li><a href="{{ pagination.url(i) }}">{{ i }}</a></li>
-			{% endif %}
-		{% endfor %}
+            {% for i in 1..pagination.get_total_pages %}
+            {% if i == pagination.get_current_page %}
+                <li class="active"><a href="#">{{ i }}</a></li>
+            {% else %}
+                <li><a href="{{ pagination.url(i) }}">{{ i }}</a></li>
+            {% endif %}
+            {% endfor %}
 
-		{% if pagination.get_current_page < pagination.get_total_pages %}
-			<li><a href="{{ pagination.url(pagination.get_total_pages) }}">»</a></li>
-		{% else %}
-			<li class="disabled"><a href="#">»</a></li>
-		{% endif %}
-	</ul>
-</div>
+            {% if pagination.get_current_page < pagination.get_total_pages %}
+                <li><a href="{{ pagination.url(pagination.get_total_pages) }}">»</a></li>
+            {% else %}
+                <li class="disabled"><a href="#">»</a></li>
+            {% endif %}
+        </ul>
+    </div>
+{% endif %}
