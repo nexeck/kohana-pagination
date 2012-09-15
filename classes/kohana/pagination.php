@@ -8,7 +8,7 @@
  * </code>
  *
  * @package   Kohana/Pagination
- * @author    Marcel Beck <marcel.beck@mbeck.org>
+ * @author    Marcel Beck <marcel.beck@outlook.com>
  * @copyright (c) 2012 Marcel Beck
  */
 abstract class Kohana_Pagination
