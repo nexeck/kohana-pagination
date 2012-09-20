@@ -14,44 +14,58 @@
 abstract class Nexeck_Pagination
 {
     /**
+     * Total items
+     *
      * @var int
      */
     protected $_total;
 
     /**
+     * Limit items per page
+     *
      * @var int
      */
     protected $_limit;
 
     /**
+     * Current page
+     *
      * @var int
      */
     protected $_current;
 
     /**
+     * Current request
+     *
      * @var Request
      */
     protected $_request;
 
     /**
+     * Current route
+     *
      * @var Route
      */
     protected $_route;
 
     /**
-     * @var array Parameters to use with Route to create URIs
+     * Parameters to use with Route to create URIs
+     *
+     * @var array
      */
     protected $_route_params = array();
 
     /**
+     * Pagination config
+     *
      * @var Kohana_Config_Group
      */
     protected $_config;
 
     /**
-     * @param int $total
-     * @param int $limit
-     * @param int $current
+     * @param int $total   Total items
+     * @param int $limit   Items limit per page, if not set the config value will be used
+     * @param int $current If not set, it will be auto detected
      *
      * @uses Request::current
      * @uses Kohana::$config
@@ -80,9 +94,9 @@ abstract class Nexeck_Pagination
     }
 
     /**
-     * @param int $total
-     * @param int $limit
-     * @param int $current
+     * @param int $total   Total items
+     * @param int $limit   Items limit per page, if not set the config value will be used
+     * @param int $current If not set, it will be auto detected
      *
      * @return Pagination
      */
@@ -135,7 +149,7 @@ abstract class Nexeck_Pagination
      * @param  array  Route parameters to set
      *
      * @return  array  Route parameters if used as getter
-     * @return  $this  Chainable as setter
+     * @return  Pagination  Chainable as setter
      */
     public function route_params(array $route_params = null)
     {
@@ -165,7 +179,7 @@ abstract class Nexeck_Pagination
     }
 
     /**
-     * @return int The total number of rows
+     * @return int The total number of items
      */
     public function get_total()
     {
@@ -173,6 +187,8 @@ abstract class Nexeck_Pagination
     }
 
     /**
+     * Get the current page
+     *
      * @return int Current page number
      */
     public function get_current_page()
@@ -181,6 +197,8 @@ abstract class Nexeck_Pagination
     }
 
     /**
+     * Detect total number of pages
+     *
      * @return int Total number of pages
      */
     public function get_total_pages()
@@ -189,6 +207,8 @@ abstract class Nexeck_Pagination
     }
 
     /**
+     * Auto detect the current page
+     *
      * @return int Current page
      */
     protected function _detect_current_page()

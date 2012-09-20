@@ -2,6 +2,6 @@
 
 return array(
     'source'            => 'route', // source: query or route
-    'key'               => 'page',
-    'first_page_in_url' => false,
+    'key'               => 'page', // key used in query or route param
+    'first_page_in_url' => false, // Should the first page shown in url. eg: http://localhost/users/list/1
 );
